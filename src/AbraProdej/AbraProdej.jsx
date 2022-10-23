@@ -9,8 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function AbraProdej() {
   const dispatch = useDispatch();
+  const firmsState = useSelector((state) => state.firmsListModel || [])
 
-  const firmsState = useSelector((state) => state.firmsListModel)
   // const firmsState = firms.winstrom.adresar
   console.log("firmsState v prodej", firmsState)
   // let polePSC = firmsState.winstrom.adresar.filter((firm) => firm.psc !== "").map(item => item.psc)
@@ -22,6 +22,11 @@ export default function AbraProdej() {
   //   // console.log('firmsState v useEffectu', firmsState)
   // }, [])
 
+
+  const loadList = () => {
+    dispatch.firmsListModel.setInitialState()
+
+  }
 
   const filterFirms = (number) => {
     dispatch.firmsListModel.filter(number)
@@ -38,7 +43,7 @@ export default function AbraProdej() {
       <HeaderView />
       <div className="abra-prodej-app__container">
         <FirmsListView firmsState={firmsState} />
-        <GroupsView filterFirms={filterFirms} reloadList={reloadList} />
+        <GroupsView filterFirms={filterFirms} reloadList={reloadList} loadList={loadList} />
       </div>
     </div>
   )

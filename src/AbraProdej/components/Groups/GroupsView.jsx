@@ -1,7 +1,8 @@
 
-const GroupsView = ({ filterFirms, reloadList }) => {
+const GroupsView = ({ filterFirms, reloadList, loadList }) => {
   return (
     <div className="abra-prodej-app__container__kohorta">
+      <button onClick={loadList}>NAČTI DATA</button>
       <p onClick={() => filterFirms("1")}>kohorta_1</p>
       <p onClick={() => filterFirms("2")}>kohorta_2</p>
       <p onClick={() => filterFirms("3")}>kohorta_3</p>

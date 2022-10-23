@@ -1,7 +1,8 @@
 import data from "../data.json"
 
 export const firmsListModel = {
-    state: data.winstrom.adresar.filter(item => item.psc.length > 0),
+    // state: data.winstrom.adresar.filter(item => item.psc.length > 0),
+    state: [],
     // state: {},
     reducers: {
         setFirms(state, firms) {
