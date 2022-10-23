@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/abra_adresar/static/css/main.8e9f5334.css",
+    "main.js": "/abra_adresar/static/js/main.384d1a67.js",
+    "index.html": "/abra_adresar/index.html",
+    "main.8e9f5334.css.map": "/abra_adresar/static/css/main.8e9f5334.css.map",
+    "main.384d1a67.js.map": "/abra_adresar/static/js/main.384d1a67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e9f5334.css",
+    "static/js/main.384d1a67.js"
+  ]
+}
