@@ -2,7 +2,7 @@ import React from "react";
 
 import FirmView from './FirmView'
 
-const FirmsListView = ({ firmsState }) => {
+const FirmsListView = ({ firmsState, loadFirmsToggler }) => {
 
   return (
     <div className="abra-prodej-app__container__firms">
@@ -17,11 +17,13 @@ const FirmsListView = ({ firmsState }) => {
           </thead>
           <tbody>
             {/* {firmsState.winstrom.adresar.map((firm) => */}
-            {firmsState.map((firm) =>
-              firm.kod && firm.psc &&
-              (
-                <FirmView key={firm.id} firm={firm} />
-              ))
+            {!loadFirmsToggler ? null
+              :
+              firmsState.map((firm) =>
+                firm.kod && firm.psc &&
+                (
+                  <FirmView key={firm.id} firm={firm} />
+                ))
             }
           </tbody>
         </table>
