@@ -60,11 +60,9 @@ export default function AbraProdej() {
 
   const reloadList = () => {
     dispatch.firmsListModel.setInitialState()
-
   }
 
   return (
-
     <div className="abra-prodej-app">
       <HeaderView />
       <div className="abra-prodej-app__container">
@@ -73,7 +71,9 @@ export default function AbraProdej() {
           filterFirms={filterFirms}
           reloadList={reloadList}
           loadList={loadList}
-          kohorts={kohortsState} />
+          kohorts={kohortsState}
+          loadFirmsToggler={loadFirmsToggler}
+        />
       </div>
     </div>
   )
